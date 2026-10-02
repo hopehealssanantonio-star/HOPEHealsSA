@@ -1309,3 +1309,15 @@ body {
         padding: 2.5rem;
     }
 }
+
+/* Multi-page layout: keep sub page content clear of the fixed header */
+body.subpage main {
+    padding-top: 90px;
+}
+.pillar h4 a {
+    color: inherit;
+    text-decoration: none;
+}
+.pillar h4 a:hover {
+    text-decoration: underline;
+}
