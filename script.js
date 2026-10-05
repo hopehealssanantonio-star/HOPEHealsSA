@@ -143,10 +143,11 @@ ${message ? `Message: ${message}` : ''}`
                 </div>
                 <h3>One More Step</h3>
                 <p>Thank you for your pledge. A confirmation email is ready to send. Please click "Send" in your email app to complete your pledge submission.</p>
-                <button class="btn btn-primary" onclick="this.closest('.thank-you-modal').remove()">Close</button>
+                <button type="button" class="btn btn-primary thank-you-close">Close</button>
             </div>
         `;
         document.body.appendChild(modal);
+        modal.querySelector('.thank-you-close').addEventListener('click', () => modal.remove());
         
         setTimeout(() => modal.classList.add('show'), 10);
     }
