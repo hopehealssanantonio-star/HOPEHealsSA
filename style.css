@@ -1,3 +1,36 @@
+/* Self-hosted fonts (Oct 2026): served from this site so pages do not wait on Google */
+@font-face {
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('fonts/cinzel-8vIJ7ww63m.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Cinzel Decorative';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/cinzel-decorative-daaCSScvJG.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Cinzel Decorative';
+    font-style: normal;
+    font-weight: 700 900;
+    font-display: swap;
+    src: url('fonts/cinzel-decorative-daaHSScvJG.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('fonts/open-sans-memvYaGs12.woff2') format('woff2');
+}
+
 :root {
     /* ===== OFFICIAL HOPE HEALS SA BRAND COLORS ===== */
     --color-navy: #800000;          /* Brand Maroon — replaces navy for headings & structural */
@@ -1320,4 +1353,61 @@ body.subpage main {
 }
 .pillar h4 a:hover {
     text-decoration: underline;
+}
+
+/* Readable text on the cyan brand color (Oct 2026): black on #00FFFF is about 16:1 */
+.donate-btn,
+.btn-primary {
+    color: var(--color-navy-dark) !important;
+}
+
+/* Readable small text (Oct 2026) */
+.pillar-number {
+    color: var(--color-navy) !important;
+}
+
+.story-org-sub,
+.contact-direct-note {
+    color: var(--color-slate-dark) !important;
+}
+
+/* Video loads only when tapped (keeps pages fast) */
+.video-facade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: #000;
+}
+
+.video-facade img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.video-facade-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 68px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    background: #cc0000;
+    border-radius: 12px;
+}
+
+.video-facade-play::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 10px 0 10px 18px;
+    border-color: transparent transparent transparent #ffffff;
 }

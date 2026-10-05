@@ -141,7 +141,7 @@ ${message ? `Message: ${message}` : ''}`
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>
                 </div>
-                <h3>Thank You!</h3>
+                <h3>One More Step</h3>
                 <p>Thank you for your pledge. A confirmation email is ready to send. Please click "Send" in your email app to complete your pledge submission.</p>
                 <button class="btn btn-primary" onclick="this.closest('.thank-you-modal').remove()">Close</button>
             </div>
@@ -230,5 +230,17 @@ ${message ? `Message: ${message}` : ''}`
                 });
             }
         });
+    });
+});
+
+// Load the YouTube player only when someone taps the video
+document.querySelectorAll('.video-facade').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube-nocookie.com/embed/' + btn.dataset.videoId + '?autoplay=1';
+        iframe.title = btn.getAttribute('aria-label').replace('Play video: ', '');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        btn.replaceWith(iframe);
     });
 });

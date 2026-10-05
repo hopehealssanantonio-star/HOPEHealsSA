@@ -9,11 +9,11 @@
     <meta property="og:title" content="Hope Heals San Antonio | Having Only Positive Expectations">
     <meta property="og:description" content="Hope Heals San Antonio is a nonprofit organization serving the San Antonio community. Led by individuals with firsthand experience of homelessness—capacity building, supportive services, and advocacy.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hopehealssa.org/">
+    <meta property="og:url" content="https://www.hopehealssa.org/">
     <meta property="og:site_name" content="Hope Heals San Antonio">
-    <meta property="og:image" content="https://hopehealssa.org/assets/images/hope-heals-sa-logo.png">
+    <meta property="og:image" content="https://www.hopehealssa.org/assets/images/hope-heals-sa-logo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://hopehealssa.org/">
+    <link rel="canonical" href="https://www.hopehealssa.org/">
     <title>Hope Heals San Antonio | Capacity Building & Advocacy</title>
     <script type="application/ld+json">
     {
@@ -21,8 +21,8 @@
         "@type": "NonprofitOrganization",
         "name": "Hope Heals San Antonio",
         "alternateName": ["HOPE Heals SA", "H.O.P.E. Heals San Antonio", "HHSA"],
-        "url": "https://hopehealssa.org",
-        "logo": "https://hopehealssa.org/assets/images/hope-heals-sa-logo.png",
+        "url": "https://www.hopehealssa.org",
+        "logo": "https://www.hopehealssa.org/assets/images/hope-heals-sa-logo.png",
         "email": "hopehealssanantonio@gmail.com",
         "areaServed": {
             "@type": "City",
@@ -40,9 +40,7 @@
     <link rel="icon" type="image/png" href="assets/images/hope-heals-sa-icon.png">
     <link rel="apple-touch-icon" href="assets/images/hope-heals-sa-icon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="fonts/open-sans-memvYaGs12.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
     <header class="header" id="header">
@@ -128,7 +126,10 @@
                     <div class="section-divider"></div>
                 </div>
                 <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/MM_CVMzC8Sw" title="HOPE Heals San Antonio &amp; MHM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <button type="button" class="video-facade" data-video-id="MM_CVMzC8Sw" aria-label="Play video: HOPE Heals San Antonio &amp; MHM">
+                        <img src="https://i.ytimg.com/vi/MM_CVMzC8Sw/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+                        <span class="video-facade-play" aria-hidden="true"></span>
+                    </button>
                 </div>
             </div>
         </section>
